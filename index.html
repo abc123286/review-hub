@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Review Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+    }
+    .review-block {
+      background: #fff;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button, a {
+      margin-top: 10px;
+      padding: 10px 16px;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+    }
+    a.download-link {
+      background: #28a745;
+    }
+    p.caption {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📣 Share Your Experience</h1>
+
+  <!-- Google Review -->
+  <div class="review-block">
+    <h2>📝 Google Review</h2>
+    <a href="https://www.google.com/search?q=your+business+name+reviews" target="_blank">
+      Leave a Google Review
+    </a>
+  </div>
+
+  <!-- Xiaohongshu -->
+  <div class="review-block">
+    <h2>📸 Xiaohongshu (小红书)</h2>
+    <p class="caption">"Loved the service at XYZ! 🌟 Highly recommend."</p>
+    <button onclick="copyText('Loved the service at XYZ! 🌟 Highly recommend.')">Copy Caption</button>
+    <br />
+    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/xiaohongshu_demo.jpg" download class="download-link">📷 Download Image</a>
+  </div>
+
+  <!-- Instagram -->
+  <div class="review-block">
+    <h2>📷 Instagram</h2>
+    <p class="caption">"Enjoying every moment at XYZ! ✨ #GreatExperience"</p>
+    <button onclick="copyText('Enjoying every moment at XYZ! ✨ #GreatExperience')">Copy Caption</button>
+    <br />
+    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/instagram_demo.jpg" download class="download-link">📸 Download Image</a>
+  </div>
+
+  <!-- Facebook -->
+  <div class="review-block">
+    <h2>📘 Facebook</h2>
+    <p class="caption">"Just visited XYZ and it was fantastic! 💯"</p>
+    <button onclick="copyText('Just visited XYZ and it was fantastic! 💯')">Copy Caption</button>
+    <br />
+    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/facebook_demo.jpg" download class="download-link">📥 Download Image</a>
+  </div>
+
+  <!-- WhatsApp -->
+  <div class="review-block">
+    <h2>💬 WhatsApp</h2>
+    <a href="https://wa.me/?text=Hi%20I%20just%20visited%20XYZ%20and%20wanted%20to%20say%20thank%20you!" target="_blank">
+      Send Us a Message
+    </a>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Caption copied to clipboard!");
+      }).catch(err => {
+        alert("Failed to copy text.");
+      });
+    }
+  </script>
+
+</body>
+</html>
