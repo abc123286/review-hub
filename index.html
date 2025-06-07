@@ -2,103 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customer Review Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Hub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f6f6f6;
-      padding: 30px;
-      text-align: center;
-    }
-    h1 {
-      color: #333;
-    }
-    .review-block {
-      background: #fff;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 400px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    button, a {
-      margin-top: 10px;
-      padding: 10px 16px;
-      text-decoration: none;
-      border: none;
-      border-radius: 5px;
-      background: #007bff;
+      background-color: #000;
       color: #fff;
-      font-size: 16px;
-      cursor: pointer;
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
     }
-    a.download-link {
-      background: #28a745;
+
+    .avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
-    p.caption {
-      font-size: 14px;
-      color: #666;
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #2d2d2d;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 12px;
+      margin: 10px 0;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    .btn i {
+      font-size: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>📣 Share Your Experience</h1>
+  <img src="https://i.imgur.com/6VBx3io.png" alt="Logo" class="avatar"/>
+  <h1>Review Hub</h1>
+  <p>Support us by sharing your experience!</p>
 
-  <!-- Google Review -->
-  <div class="review-block">
-    <h2>📝 Google Review</h2>
-    <a href="https://www.google.com/search?q=your+business+name+reviews" target="_blank">
-      Leave a Google Review
-    </a>
-  </div>
+  <a href="https://wa.me/?text=I%20had%20a%20great%20experience!" class="btn" target="_blank">
+    <i class="fab fa-whatsapp"></i> Share on WhatsApp
+  </a>
 
-  <!-- Xiaohongshu -->
-  <div class="review-block">
-    <h2>📸 Xiaohongshu (小红书)</h2>
-    <p class="caption">"Loved the service at XYZ! 🌟 Highly recommend."</p>
-    <button onclick="copyText('Loved the service at XYZ! 🌟 Highly recommend.')">Copy Caption</button>
-    <br />
-    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/xiaohongshu_demo.jpg" download class="download-link">📷 Download Image</a>
-  </div>
+  <a href="https://search.google.com/local/writereview?placeid=ChIJX3tG-5BCzDERKx9rprCLNSo" class="btn" target="_blank">
+    <i class="fab fa-google"></i> Share on Google Review
+  </a>
 
-  <!-- Instagram -->
-  <div class="review-block">
-    <h2>📷 Instagram</h2>
-    <p class="caption">"Enjoying every moment at XYZ! ✨ #GreatExperience"</p>
-    <button onclick="copyText('Enjoying every moment at XYZ! ✨ #GreatExperience')">Copy Caption</button>
-    <br />
-    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/instagram_demo.jpg" download class="download-link">📸 Download Image</a>
-  </div>
+  <a href="https://www.xiaohongshu.com/" class="btn" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Xiaohongshu_Logo.png" style="height: 20px;" alt="Xiaohongshu Logo"/>
+    Share on 小红书
+  </a>
 
-  <!-- Facebook -->
-  <div class="review-block">
-    <h2>📘 Facebook</h2>
-    <p class="caption">"Just visited XYZ and it was fantastic! 💯"</p>
-    <button onclick="copyText('Just visited XYZ and it was fantastic! 💯')">Copy Caption</button>
-    <br />
-    <a href="https://raw.githubusercontent.com/yourusername/yourrepo/main/facebook_demo.jpg" download class="download-link">📥 Download Image</a>
-  </div>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https://shuyi1234.github.io/review-hub/" class="btn" target="_blank">
+    <i class="fab fa-facebook"></i> Share on Facebook
+  </a>
 
-  <!-- WhatsApp -->
-  <div class="review-block">
-    <h2>💬 WhatsApp</h2>
-    <a href="https://wa.me/?text=Hi%20I%20just%20visited%20XYZ%20and%20wanted%20to%20say%20thank%20you!" target="_blank">
-      Send Us a Message
-    </a>
-  </div>
-
-  <script>
-    function copyText(text) {
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Caption copied to clipboard!");
-      }).catch(err => {
-        alert("Failed to copy text.");
-      });
-    }
-  </script>
+  <a href="https://www.instagram.com/" class="btn" target="_blank">
+    <i class="fab fa-instagram"></i> Share on Instagram
+  </a>
 
 </body>
 </html>
